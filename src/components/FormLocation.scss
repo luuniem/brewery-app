@@ -1,0 +1,14 @@
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  max-width: 50vw;
+}
+
+/* label underline focus color */
+input[type="text"]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #ffc107;
+  box-shadow: 0 1px 0 0 #ffc107;
+}
