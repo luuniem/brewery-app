@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-
-=======
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { render } from "@testing-library/react";
 import "bootstrap/dist/css/bootstrap.css";
 
 function BreweryList() {
-  const [breweryList] = React.useState([
+  const [breweryList] = useState([
     {
       name: "Dechutes",
       city: "Portland"
@@ -19,8 +16,8 @@ function BreweryList() {
   ]);
 
   return (
-    <table class="table">
-      <thead class="thead-dark">
+    <table className="table">
+      <thead className="thead-dark">
         <tr>
           <th scope="col">Name</th>
           <th scope="col">City</th>
@@ -39,4 +36,3 @@ function BreweryList() {
 }
 
 export default BreweryList;
->>>>>>> jessica-branch
