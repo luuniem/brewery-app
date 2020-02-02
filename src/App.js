@@ -13,8 +13,6 @@ function App() {
     <div className="App">
       <h1>Brew Me</h1>
       <Brewery />
-
-      <BreweryList />
     </div>
   );
 }

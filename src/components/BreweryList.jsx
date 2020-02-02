@@ -1,38 +1,31 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import { render } from "@testing-library/react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-function BreweryList() {
-  const [breweryList] = useState([
-    {
-      name: "Dechutes",
-      city: "Portland"
-    },
-    {
-      name: "Boneyard",
-      city: "Bend"
-    }
-  ]);
+const BreweryList = props => {
+  const { breweryData } = props;
 
   return (
     <table className="table">
       <thead className="thead-dark">
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">City</th>
+          <th class="text-left" scope="col">
+            Name
+          </th>
+          <th class="text-left" scope="col">
+            City
+          </th>
         </tr>
       </thead>
       <tbody>
-        {breweryList.map(brewery => (
+        {breweryData.map(brewery => (
           <tr>
             <td>{brewery.name}</td>
-            <td>{brewery.city}</td>
+            <td>{brewery.locality}</td>
           </tr>
         ))}
       </tbody>
     </table>
   );
-}
+};
 
 export default BreweryList;
